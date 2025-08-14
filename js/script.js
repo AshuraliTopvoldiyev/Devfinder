@@ -47,35 +47,34 @@ const getData = async (api) => {
 }
 
 const writeData = (item) => {
-    console.log(item);
 
     card.innerHTML = ""
     card.innerHTML = `<div class="image">
-                    <img src=${item.avatar_url} alt="">
+                    <img src=${item?.avatar_url} alt="">
                 </div>
                 <div class="info">
                     <div class="namePart">
                         <div class="part-one">
-                            <h1>${item.name}</h1>
-                            <a class="email" href="">${item.login}</a>
+                            <h1>${item?.name?item?.name:"name"}</h1>
+                            <a class="email" href="">${item.login?item.login:"Email link"}</a>
                         </div>
-                        <h4 class="col">${item.created_at}
+                        <h4 class="col">${item?.created_at?item?.created_at:"Created-at"}
                     </div>
 
-                    <p class="col">${item.bio.slice(0,70)}</p>
+                    <p class="col">${item?.bio ? item.bio?.slice(0, 70) : "bio"}</p>
                     <div class="row">
 
                         <div class="call">
                             <h4 class="blow">Repos</h4>
-                            <h2 class="num">${item.public_repos}</h2>
+                            <h2 class="num">${item?.public_repos?item?.public_repos:0}</h2>
                         </div>
                         <div class="call">
                             <h4 class="blow">Followers</h4>
-                            <h2 class="num">${item.followers}</h2>
+                            <h2 class="num">${item?.followers?item?.followers:0}</h2>
                         </div>
                         <div class="call">
                             <h4 class="blow">Following</h4>
-                            <h2 class="num">${item.following}</h2>
+                            <h2 class="num">${item?.following?item?.following:0}</h2>
                         </div>
 
                     </div>
@@ -84,25 +83,25 @@ const writeData = (item) => {
                         <a href="">
                             <div class="loc">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <h3>${item.location}</h3>
+                                <h3>${item.location?item.location:"location"}</h3>
                             </div>
                         </a>
                         <a href="">
                             <div class="loc">
                                 <i class="fa-brands fa-twitter"></i>
-                                <h3>${item.Twitter_username}</h3>
+                                <h3>${item.Twitter_username?item.Twitter_username:"Twitter_username"}</h3>
                             </div>
                         </a>
                         <a href=${item.blog}>
                             <div class="loc">
                                 <i class="fa-solid fa-link"></i>
-                                <h3>${item.blog.slice(0,20)}</h3>
+                                <h3>${item?.blog?item?.blog?.slice(0, 20):"blog"}</h3>
                             </div>
                         </a>
                         <a href="">
                             <div class="loc">
                                 <i class="fa-solid fa-tree-city"></i>
-                                <h3>${item.company}</h3>
+                                <h3>${item.company?item.company:"company"}</h3>
                             </div>
                         </a>
 
