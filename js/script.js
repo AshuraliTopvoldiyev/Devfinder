@@ -6,7 +6,7 @@ const form = document.querySelector("form")
 const input = document.querySelector("input")
 const card = document.querySelector(".card")
 
-let mode = localStorage.getItem("night")? localStorage.getItem("night"):"light"
+let mode = localStorage.getItem("night") ? localStorage.getItem("night") : "light"
 
 const darkMode = () => {
     if (mode == "dark") {
@@ -27,7 +27,7 @@ darklight.addEventListener("click", () => {
         mode = "dark"
     }
     darkMode()
-    localStorage.setItem("night",mode)
+    localStorage.setItem("night", mode)
 })
 
 form.addEventListener("submit", (e) => {
@@ -51,7 +51,7 @@ const writeData = (item) => {
 
     card.innerHTML = ""
     card.innerHTML = `<div class="image">
-                    <img src="./img/Bitmap.svg" alt="">
+                    <img src=${item.avatar_url} alt="">
                 </div>
                 <div class="info">
                     <div class="namePart">
@@ -67,15 +67,15 @@ const writeData = (item) => {
 
                         <div class="call">
                             <h4 class="blow">Repos</h4>
-                            <h2 class="num">8</h2>
+                            <h2 class="num">${item.public_repos}</h2>
                         </div>
                         <div class="call">
                             <h4 class="blow">Followers</h4>
-                            <h2 class="num">3938</h2>
+                            <h2 class="num">${item.followers}</h2>
                         </div>
                         <div class="call">
                             <h4 class="blow">Following</h4>
-                            <h2 class="num">9</h2>
+                            <h2 class="num">${item.following}</h2>
                         </div>
 
                     </div>
@@ -93,7 +93,7 @@ const writeData = (item) => {
                                 <h3>${item.Twitter_username}</h3>
                             </div>
                         </a>
-                        <a href="">
+                        <a href=${item.blog}>
                             <div class="loc">
                                 <i class="fa-solid fa-link"></i>
                                 <h3>${item.blog}</h3>
