@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(221, 219, 245, 0.416);
+    background-image: url(../img/background-image-mp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body.active {
+    background-color: #141D2F;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222731;
+}
+
+body.active nav a {
+    color: #FFFFFF;
+}
+
+nav h1 {
+    font-family: "Space Mono", monospace;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 2px;
+    color: rgba(200, 200, 221, 0.914);
+    text-shadow: 0px 0px 2px rgba(250, 246, 246, 0.842);
+    background-color: inherit;
+}
+
+nav button {
+    padding: 8px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border: none;
+    background-color: inherit;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    color: #cdd3dc;
+    cursor: pointer;
+}
+
+
+body.active nav button {
+    color: #FFFFFF;
+}
+
+form {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0px 0px 4px 1px rgba(185, 184, 231, 0.77);
+    background-color: #cecfe4;
+    /* backdrop-filter: blur(100px); */
+}
+
+body.active form {
+    background-color: #1E2A47;
+    box-shadow: none;
+    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.315);
+}
+
+form .part-one {
+    width: 80%;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+form .part-one i {
+    font-size: 22px;
+    color: rgba(0, 0, 255, 0.751);  
+    padding-left: 15px;
+}
+body.active form .part-one i{
+    color: rgb(91, 158, 234);  
+}
+
+form .part-one input {
+    width: 80%;
+    font-size: 18px;
+    padding: 10px 0px;
+    outline: none;
+    font-family: "Space Mono", monospace;
+    line-height: 25px;
+    font-weight: 400;
+    background-color: inherit;
+    border: none;
+}
+
+body.active form .part-one input {
+    color: #FFFFFF;
+}
+
+body.active form .part-one input::placeholder {
+   color: rgb(5, 131, 250);
+}
+
+form .part-one input::placeholder {
+    font-family: "Space Mono", monospace;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    color: rgba(0, 0, 255, 0.751);
+}
+
+form .part-two button {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    line-height: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 255, 0.751);
+    border: none;
+    border-radius: 10px;
+}
+body.active form .part-two button{
+     background-color: rgb(57, 57, 218);
+}
+
+.box .card {
+    /* border: 1px solid #000; */
+    border-radius: 16px;
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 3px 1px rgba(110, 108, 224, 0.63);
+    margin-top: 20px;
+    background-color: #dddee9;
+    position: relative;
+    height: 440px;
+}
+
+body.active .box .card {
+    background-color: #1E2A47;
+    box-shadow: none;
+    box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.299);
+
+}
+
+.card .image {
+    /* border: 1px solid #000; */
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 100px;
+    width: 20%;
+
+}
+
+.card .image img {
+    width: 100%;
+}
+
+.card .info {
+    width: 65%;
+    /* border: 1px solid #000; */
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.card .info .namePart {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.card .info .namePart h1 {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 35px;
+    color: #2B3442;
+}
+
+body.active .card .info .namePart h1 {
+    color: #FFFFFF;
+}
+
+body.active .col {
+    color: white;
+}
+
+.col {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0px;
+    color: #2f4262;
+}
+
+.card .info a {
+    text-decoration: none;
+}
+
+.card .info .email {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    color: #0079FF;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.card .info .row {
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-top: 30px;
+    background-color: #b2b9d2;
+    border-radius: 16px;
+}
+
+body.active .card .info .row {
+    background-color: #141D2F;
+}
+
+.card .info .row .call {
+    width: 30%;
+}
+
+body.active .blow,
+body.active .num,
+body.active a .loc i,
+body.active .loc h3 {
+    color: #FFFFFF;
+}
+
+.blow {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    color: #2b508c;
+}
+
+.num {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    color: #2B3442;
+}
+
+.card .info .links {
+    /* border: 1px solid #000; */
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card .info .links a {
+    width: 46%;
+    /* border: 1px solid red; */
+}
+
+.card .info .links a .loc {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 15px;
+}
+
+a .loc i {
+    color: #4B6A9B;
+    font-size: 18px;
+}
+
+a .loc h3 {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #4B6A9B;
+}
+
+
+
+@media(max-width:900px) {
+    .container {
+        padding: 0xp 15px;
+    }
+
+    .card .info {
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        padding: 0px 20px;
+    }
+
+    .card .info .namePart {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        padding-left: 170px;
+        margin-bottom: 60px;
+    }
+
+    .card .image {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        width: 130px;
+        height: 130px;
+        /* border: 1px solid #000; */
+    }
+
+    .card .info {
+
+        padding: 0px 40px;
+    }
+
+    .box .card {
+        height: 550px;
+    }
+}
+
+@media (max-width:550px) {
+    .container {
+        padding: 0px 15px;
+        margin-top: 0px;
+    }
+
+    .box {
+        /* border: 1px solid #000;.card .info */
+        height: 100vh;
+    }
+
+    nav {
+        padding: 15px 0px;
+        margin-bottom: 10px;
+
+    }
+
+    nav h1 {
+        font-size: 20px;
+    }
+
+    nav button {
+        font-size: 20px;
+        display: flex;
+        gap: 5px;
+    }
+
+    form .part-one input {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    form .part-one input::placeholder {
+        font-size: 14px;
+    }
+
+    form {
+        padding: 10px 5px;
+    }
+
+    form .part-one {
+        display: flex;
+        gap: 15px;
+    }
+
+    .box .card {
+        height: 630px;
+        width: 100%;
+        padding: 0px 0px;
+        position: relative;
+        border: 1px solid #000;
+    }
+
+    .card .info {
+        width: 100%;
+        height: 620px;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        padding: 0px 20px;
+    }
+
+    .card .info .namePart {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        padding-left: 175px;
+        margin-bottom: 40px;
+    }
+
+    .card .info .namePart h1 {
+        font-size: 16px;
+    }
+
+    .card .info .namePart h4 {
+        padding-left: 0px;
+    }
+
+    .card .info .email {
+        font-size: 13px;
+    }
+
+    .col {
+        font-size: 14px;
+        padding-left: 10px;
+    }
+
+    .card .info .row {
+        margin-top: 20px;
+    }
+
+    .blow {
+        font-size: 12px;
+    }
+
+    .num {
+        font-size: 22px;
+    }
+
+    .card .info .links {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+
+    }
+
+    .card .image {
+        position: absolute;
+        top: 30px;
+        left: 40px;
+        width: 130px;
+        /* border: 1px solid #000; */
+    }
+
+    .card .info .links a .loc {
+        width: 300px;
+        height: 30px;
+        /* border: 1px solid #000; */
+    }
+
+    a .loc i {
+        font-size: 22px;
+    }
+}
