@@ -155,7 +155,7 @@ body.active form .part-two button{
 }
 
 .box .card {
-    /* border: 1px solid #000; */
+    border: 1px solid #000;
     border-radius: 16px;
     display: flex;
     align-items: start;
@@ -166,7 +166,8 @@ body.active form .part-two button{
     margin-top: 20px;
     background-color: #dddee9;
     position: relative;
-    height: 440px;
+    height: 60vh;
+
 }
 
 body.active .box .card {
@@ -361,25 +362,26 @@ a .loc h3 {
         padding: 0px 40px;
     }
 
-    .box .card {
-        height: 550px;
-    }
 }
 
 @media (max-width:550px) {
+   
     .container {
         padding: 0px 15px;
         margin-top: 0px;
+        margin-bottom: 0px;
     }
+  
 
     .box {
-        /* border: 1px solid #000;.card .info */
+       border: 1px solid greenyellow;
         height: 100vh;
+        
     }
 
     nav {
-        padding: 15px 0px;
-        margin-bottom: 10px;
+        padding: 10px 0px;
+        margin-bottom: -10px;
 
     }
 
@@ -388,7 +390,7 @@ a .loc h3 {
     }
 
     nav button {
-        font-size: 20px;
+        font-size: 16px;
         display: flex;
         gap: 5px;
     }
@@ -399,11 +401,15 @@ a .loc h3 {
     }
 
     form .part-one input::placeholder {
-        font-size: 14px;
+        font-size: 12px;
+    }
+    form .part-two button{
+        padding: 5px 15px;
     }
 
     form {
-        padding: 10px 5px;
+        padding: 5px 5px;
+        margin-bottom: -5px;
     }
 
     form .part-one {
@@ -412,7 +418,7 @@ a .loc h3 {
     }
 
     .box .card {
-        height: 630px;
+        height: 78vh;
         width: 100%;
         padding: 0px 0px;
         position: relative;
@@ -421,7 +427,7 @@ a .loc h3 {
 
     .card .info {
         width: 100%;
-        height: 620px;
+        /* height: 10px; */
         position: absolute;
         left: 0px;
         right: 0px;
@@ -433,12 +439,13 @@ a .loc h3 {
         align-items: start;
         justify-content: start;
         flex-direction: column;
-        padding-left: 175px;
-        margin-bottom: 40px;
+        padding-left: 135px;
+        margin-bottom: 10px;
+        margin-top: -25px;
     }
 
     .card .info .namePart h1 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .card .info .namePart h4 {
@@ -450,12 +457,15 @@ a .loc h3 {
     }
 
     .col {
-        font-size: 14px;
+        font-size: 13px;
         padding-left: 10px;
     }
 
     .card .info .row {
-        margin-top: 20px;
+        margin-top: 15px;
+        padding: 5px 15px;
+        border: 1px solid #000;
+        text-align: center;
     }
 
     .blow {
@@ -471,15 +481,16 @@ a .loc h3 {
         align-items: start;
         justify-content: start;
         flex-direction: column;
-
+        margin-top: 20px;
     }
 
     .card .image {
         position: absolute;
-        top: 30px;
+        top: 20px;
         left: 40px;
-        width: 130px;
-        /* border: 1px solid #000; */
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
     }
 
     .card .info .links a .loc {
