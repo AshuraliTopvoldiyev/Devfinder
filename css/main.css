@@ -194,7 +194,6 @@ body.active .box .card {
 .card .info {
     width: 65%;
     height: 420px;
-    /* border: 1px solid red; */
     position: absolute;
     top: 30px;
     right: 50px;
@@ -498,7 +497,6 @@ a .loc h3 {
         left: 50px;
         width: 100px;
         height: 100px;
-        border: 1px solid #000;
     }
 
     .card .info .links a .loc {
