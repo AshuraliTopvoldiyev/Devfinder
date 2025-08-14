@@ -62,7 +62,7 @@ const writeData = (item) => {
                         <h4 class="col">${item.created_at}
                     </div>
 
-                    <p class="col">${item.bio}</p>
+                    <p class="col">${item.bio.slice(0,70)}</p>
                     <div class="row">
 
                         <div class="call">
@@ -96,7 +96,7 @@ const writeData = (item) => {
                         <a href=${item.blog}>
                             <div class="loc">
                                 <i class="fa-solid fa-link"></i>
-                                <h3>${item.blog}</h3>
+                                <h3>${item.blog.slice(0,20)}</h3>
                             </div>
                         </a>
                         <a href="">

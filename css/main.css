@@ -20,7 +20,7 @@ body.active {
 
 .container {
     max-width: 700px;
-    margin: 50px auto;
+    margin: 15px auto;
 }
 
 
@@ -47,7 +47,7 @@ nav h1 {
     font-weight: 700;
     line-height: 32px;
     letter-spacing: 2px;
-    color: rgba(200, 200, 221, 0.914);
+    color: rgb(235, 235, 245);
     text-shadow: 0px 0px 2px rgba(250, 246, 246, 0.842);
     background-color: inherit;
 }
@@ -90,7 +90,7 @@ form {
 body.active form {
     background-color: #1E2A47;
     box-shadow: none;
-    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.315);
+    box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.167);
 }
 
 form .part-one {
@@ -104,11 +104,12 @@ form .part-one {
 
 form .part-one i {
     font-size: 22px;
-    color: rgba(0, 0, 255, 0.751);  
+    color: rgba(0, 0, 255, 0.751);
     padding-left: 15px;
 }
-body.active form .part-one i{
-    color: rgb(91, 158, 234);  
+
+body.active form .part-one i {
+    color: rgb(91, 158, 234);
 }
 
 form .part-one input {
@@ -128,7 +129,7 @@ body.active form .part-one input {
 }
 
 body.active form .part-one input::placeholder {
-   color: rgb(5, 131, 250);
+    color: rgb(5, 131, 250);
 }
 
 form .part-one input::placeholder {
@@ -150,12 +151,12 @@ form .part-two button {
     border: none;
     border-radius: 10px;
 }
-body.active form .part-two button{
-     background-color: rgb(57, 57, 218);
+
+body.active form .part-two button {
+    background-color: rgb(57, 57, 218);
 }
 
 .box .card {
-    border: 1px solid #000;
     border-radius: 16px;
     display: flex;
     align-items: start;
@@ -163,27 +164,26 @@ body.active form .part-two button{
     padding: 50px;
     border-radius: 16px;
     box-shadow: 0px 0px 3px 1px rgba(110, 108, 224, 0.63);
-    margin-top: 20px;
     background-color: #dddee9;
     position: relative;
-    height: 60vh;
-
+    min-height: 470px;
+    padding-bottom: 50px;
 }
 
 body.active .box .card {
     background-color: #1E2A47;
     box-shadow: none;
     box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.299);
-
 }
 
 .card .image {
-    /* border: 1px solid #000; */
     border: none;
     border-radius: 50%;
     overflow: hidden;
-    height: 100px;
-    width: 20%;
+    height: 165px;
+    width: 28%;
+    margin-top: -30px;
+    margin-left: -25px;
 
 }
 
@@ -193,9 +193,10 @@ body.active .box .card {
 
 .card .info {
     width: 65%;
-    /* border: 1px solid #000; */
+    height: 420px;
+    /* border: 1px solid red; */
     position: absolute;
-    top: 50px;
+    top: 30px;
     right: 50px;
 }
 
@@ -204,6 +205,7 @@ body.active .box .card {
     align-items: start;
     justify-content: space-between;
     margin-bottom: 15px;
+    padding-left: 15px;
 }
 
 .card .info .namePart h1 {
@@ -225,10 +227,14 @@ body.active .col {
 .col {
     font-family: "Space Mono", monospace;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 25px;
     letter-spacing: 0px;
     color: #2f4262;
+    padding-left: 15px;
+}
+#col{
+    height: 60px;
 }
 
 .card .info a {
@@ -258,7 +264,7 @@ body.active .col {
 }
 
 body.active .card .info .row {
-    background-color: #141D2F;
+    background-color: #111f3b;
 }
 
 .card .info .row .call {
@@ -296,7 +302,7 @@ body.active .loc h3 {
     align-items: center;
     justify-content: start;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
 }
 
 .card .info .links a {
@@ -309,6 +315,7 @@ body.active .loc h3 {
     align-items: start;
     justify-content: start;
     gap: 15px;
+    margin-bottom: 10px;
 }
 
 a .loc i {
@@ -365,17 +372,17 @@ a .loc h3 {
 }
 
 @media (max-width:550px) {
-   
+
     .container {
         padding: 0px 15px;
         margin-top: 0px;
         margin-bottom: 0px;
     }
-  
+
 
     .box {
         height: 100vh;
-        
+
     }
 
     nav {
@@ -402,7 +409,8 @@ a .loc h3 {
     form .part-one input::placeholder {
         font-size: 12px;
     }
-    form .part-two button{
+
+    form .part-two button {
         padding: 5px 15px;
     }
 
@@ -421,7 +429,7 @@ a .loc h3 {
         width: 100%;
         padding: 0px 0px;
         position: relative;
-        border: 1px solid #000;
+        margin-top: 20px;
     }
 
     .card .info {
@@ -439,8 +447,8 @@ a .loc h3 {
         justify-content: start;
         flex-direction: column;
         padding-left: 135px;
-        margin-bottom: 10px;
-        margin-top: -25px;
+        margin-bottom: 20px;
+        margin-top: -15px;
     }
 
     .card .info .namePart h1 {
@@ -463,8 +471,8 @@ a .loc h3 {
     .card .info .row {
         margin-top: 15px;
         padding: 5px 15px;
-        border: 1px solid #000;
         text-align: center;
+        /* background-color: white; */
     }
 
     .blow {
@@ -481,12 +489,13 @@ a .loc h3 {
         justify-content: start;
         flex-direction: column;
         margin-top: 20px;
+        gap: 15px;
     }
 
     .card .image {
         position: absolute;
-        top: 20px;
-        left: 40px;
+        top: 40px;
+        left: 50px;
         width: 100px;
         height: 100px;
         border: 1px solid #000;
