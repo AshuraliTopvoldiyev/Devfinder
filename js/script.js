@@ -32,9 +32,13 @@ darklight.addEventListener("click", () => {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
-    const api = `https://api.github.com/users/${input.value}`
+    if (input.value.trim().replaceAll(" ","").length > 0){
+        const api = `https://api.github.com/users/${input.value}`
     console.log(api);
     getData(api)
+    }else{
+        alert(`Malumot kiritilmagan!`)
+    }
     input.value = ""
 
 })
@@ -55,10 +59,10 @@ const writeData = (item) => {
                 <div class="info">
                     <div class="namePart">
                         <div class="part-one">
-                            <h1>${item?.name?item?.name:"name"}</h1>
-                            <a class="email" href="">${item.login?item.login:"Email link"}</a>
+                            <h1>${item?.name ? item?.name : "name"}</h1>
+                            <a class="email" href="">${item.login ? item.login : "Email link"}</a>
                         </div>
-                        <h4 class="col">${item?.created_at?item?.created_at:"Created-at"}
+                        <h4 class="col">${item?.created_at ? item?.created_at : "Created-at"}
                     </div>
 
                     <p class="col">${item?.bio ? item.bio?.slice(0, 70) : "bio"}</p>
@@ -66,15 +70,15 @@ const writeData = (item) => {
 
                         <div class="call">
                             <h4 class="blow">Repos</h4>
-                            <h2 class="num">${item?.public_repos?item?.public_repos:0}</h2>
+                            <h2 class="num">${item?.public_repos ? item?.public_repos : 0}</h2>
                         </div>
                         <div class="call">
                             <h4 class="blow">Followers</h4>
-                            <h2 class="num">${item?.followers?item?.followers:0}</h2>
+                            <h2 class="num">${item?.followers ? item?.followers : 0}</h2>
                         </div>
                         <div class="call">
                             <h4 class="blow">Following</h4>
-                            <h2 class="num">${item?.following?item?.following:0}</h2>
+                            <h2 class="num">${item?.following ? item?.following : 0}</h2>
                         </div>
 
                     </div>
@@ -83,25 +87,25 @@ const writeData = (item) => {
                         <a href="">
                             <div class="loc">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <h3>${item.location?item.location:"location"}</h3>
+                                <h3>${item.location ? item.location : "location"}</h3>
                             </div>
                         </a>
                         <a href="">
                             <div class="loc">
                                 <i class="fa-brands fa-twitter"></i>
-                                <h3>${item.Twitter_username?item.Twitter_username:"Twitter_username"}</h3>
+                                <h3>${item.Twitter_username ? item.Twitter_username : "Twitter_username"}</h3>
                             </div>
                         </a>
                         <a href=${item.blog}>
                             <div class="loc">
                                 <i class="fa-solid fa-link"></i>
-                                <h3>${item?.blog?item?.blog?.slice(0, 20):"blog"}</h3>
+                                <h3>${item?.blog ? item?.blog?.slice(0, 20) : "blog"}</h3>
                             </div>
                         </a>
                         <a href="">
                             <div class="loc">
                                 <i class="fa-solid fa-tree-city"></i>
-                                <h3>${item.company?item.company:"company"}</h3>
+                                <h3>${item.company ? item.company : "company"}</h3>
                             </div>
                         </a>
 
